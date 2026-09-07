@@ -1,0 +1,24 @@
+[package]
+name = "i3ipc"
+version = "0.10.1"
+authors = ["Trevor Merrifield <trevorm42@gmail.com>"]
+description = "A library for controlling i3-wm through its IPC interface"
+license = "MIT"
+repository = "https://github.com/tmerr/i3ipc-rs"
+
+[dependencies]
+byteorder = "1.2.7"
+serde = { workspace = true }
+serde_json = { workspace = true }
+tracing = {workspace = true}
+
+[features]
+i3-4-12 = []
+i3-4-13 = ["i3-4-12"]
+i3-4-14 = ["i3-4-13"]
+i3-next = ["i3-4-14"]
+dox = ["i3-next"]
+sway-1-1 = ["i3-next"]
+
+[package.metadata.docs.rs]
+features = ["dox"]
