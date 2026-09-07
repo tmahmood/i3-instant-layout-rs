@@ -1,5 +1,5 @@
 //! Some common code used by both the event and reply modules.
-use reply;
+use crate::reply;
 use std::collections::HashMap;
 
 

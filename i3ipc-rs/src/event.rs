@@ -1,10 +1,9 @@
 //! Abstractions for the events passed back from i3.
 
-use common;
-use reply;
 use std::str::FromStr;
 
-use event::inner::*;
+use crate::event::inner::*;
+use crate::{common, reply};
 
 /// An event passed back from i3.
 #[derive(Debug)]
